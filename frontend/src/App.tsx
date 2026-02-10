@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 import './App.css'
 
 const getCurrentCount = async (): Promise<number> => {
-  const response = await fetch("http://localhost:3000");
+  const response = await fetch("https://prosek.shop/vancata/3000/");
   const data = await response.text();
 
   return Number(data);
 }
 
 const addToCount = async (toAdd: number): Promise<number> => {
-  const response = await fetch("http://localhost:3000/add",
+  const response = await fetch("https://prosek.shop/vancata/3000/add",
     {
       method: "POST",
       headers: { "content-type": "application/json" },
